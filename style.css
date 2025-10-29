@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+p {
+    align-self: center;
+    font-weight: bold;
+    padding: 3vh 0;
+    font-size: large;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 5vh 10vw;
+}
+
+#choices {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    padding: 5vh;
+    /* Make div unclickable */
+    pointer-events: none;
+}
+
+/* div around img, so that reducing img width by hovering don't reduce clickable area */
+#choices .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 15%;
+    border-radius: 8px;
+    /* make cards clickable again, because parent is unclickable */
+    pointer-events: initial;
+    /* dont select / highlight div by doubleclick */
+    user-select: none;
+}
+
+img {
+    max-width: 100%;
+    /* Put image behind dif, so that div get clicked not the image */
+    z-index: -1;
+}
+
+.card:hover img{
+    max-width: 85%;
+}
+
+.card:active img{
+    filter: grayscale(100%);
+}
+
+#replay {
+    margin-bottom: 5vh;
+    padding: 0.5rem 0.75rem;
+    align-self: center;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 10%
+}
+
+.scoreCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#log {
+    /* Damit /n in .textContent als new line interpretiert wird. */
+    white-space: pre-line;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 0;
+    background-color: lightgray;
+}

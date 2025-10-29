@@ -4,10 +4,43 @@
         <meta charset="UTF-8">
         <title>Odin Rock Paper Scissors</title>
         <link rel="stylesheet" href="style.css">
-        <script src="game.js"></script>
+        <script src="game.js" defer></script>
     </head>
     <body>
-        <h1>Odin Rock Paper Scissors</h1>
-        <p>Bisher ist das ganze nur ein Game in der Konsole.</p>
+        <div class="header">
+            <h1>Odin Rock Paper Scissors</h1>
+        </div>
+        <div class="content">
+            <p>Choose</p>
+            <div id="choices">
+                <div class="card" id="rock">
+                    <img src="./images/rock.svg" alt="Rock Icon">
+                </div>
+                <div class="card" id="paper">
+                    <img src="./images/paper.svg" alt="Paper Icon">
+                </div>
+                <div class="card" id="scissors">
+                    <img src="./images/scissors.svg" alt="Scissors Icon">
+                </div>
+            </div>
+            <button id="replay">New Game</button>
+            <p>Scoreboard</p>
+            <div id="scoreboard">
+                <div class="scoreCard">
+                    <span>Human</span>
+                    <span id="humanScore">0</span>
+                </div>
+                <div class="scoreCard">
+                    <span>Computer</span>
+                    <span id="computerScore">0</span>
+                </div>
+            </div>
+            <p>Log</p>
+            <div id="log"></div>
+        </div>
+        <div class="footer">
+            <span>Copyright @ Dredur 2025</span>
+            <span>Images from <a href="https://www.svgrepo.com">Svgrepo</a></span>
+        </div>
     </body>
 </html>
